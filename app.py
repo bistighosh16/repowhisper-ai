@@ -53,7 +53,7 @@ st.markdown("""
         border-right: 3px solid var(--sage-dark);
     }
 
- /* Fix: Make sidebar toggle button ALWAYS visible */
+                /* Fix: Make sidebar toggle button ALWAYS visible */
     button[data-testid="stBaseButton-headerNoPadding"],
     button[kind="header"],
     [data-testid="stSidebarCollapsedControl"],

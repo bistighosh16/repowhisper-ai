@@ -21,9 +21,10 @@ st.set_page_config(
 # CUSTOM CSS - Sage Green + Pink Professional Theme
 # ============================================================
 st.markdown("""
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-    /* Import Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
     
     /* Root Colors - DEEPER Sage Green + Pink Palette */
     :root {
@@ -277,9 +278,11 @@ st.markdown('<p class="hero-subtitle">🌿 The tool that helps you keep your job
 st.markdown("""
 <div class="info-box">
     <h3 style="margin-top: 0;">👋 Welcome, developer!</h3>
-    <p style="margin-bottom: 0;">
+    <p style="margin-bottom: 0; color: #1F2E1F;">
         Ever felt lost staring at a massive codebase? You're not alone! 
-        RepoWhisper AI helps you <strong>understand, navigate, and contribute</strong> 
+        RepoWhisper AI helps you <b style="color: #C85A7E;">understand</b>, 
+        <b style="color: #C85A7E;">navigate</b>, and 
+        <b style="color: #C85A7E;">contribute</b> 
         to any GitHub repository — like having a senior developer sitting next to you.
     </p>
 </div>

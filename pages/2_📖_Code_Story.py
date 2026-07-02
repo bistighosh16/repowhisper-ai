@@ -346,8 +346,34 @@ st.markdown("""
     
     /* Hide Streamlit branding */
     #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
+footer {visibility: hidden;}
+.stDeployButton {display: none;}
+
+/* Hide header background but keep toggle button visible */
+header[data-testid="stHeader"] {
+    background: transparent !important;
+    height: 0 !important;
+}
+
+/* Sidebar toggle button - sage and pink theme */
+[data-testid="stSidebarCollapsedControl"] {
+    background: linear-gradient(135deg, #3D5A3C, #C85A7E) !important;
+    border: 1px solid #A8C4A2 !important;
+    border-radius: 12px !important;
+    padding: 0.5rem !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 15px rgba(61, 90, 60, 0.4);
+    z-index: 999999 !important;
+}
+
+[data-testid="stSidebarCollapsedControl"]:hover {
+    background: linear-gradient(135deg, #C85A7E, #3D5A3C) !important;
+    box-shadow: 0 6px 25px rgba(200, 90, 126, 0.6);
+}
+
+[data-testid="stSidebarCollapsedControl"] button {
+    color: white !important;
+}
         
 </style>
 """, unsafe_allow_html=True)

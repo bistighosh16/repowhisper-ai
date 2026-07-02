@@ -254,5 +254,3 @@ Made with 💜 by Vivi
 Building tools that help developers understand, contribute, and thrive.
 
 ⭐ If RepoWhisper AI helped you, please star the repo! ⭐
-
-</div> ```

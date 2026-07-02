@@ -52,40 +52,7 @@ st.markdown("""
         border-right: 3px solid var(--sage-dark);
     }
             
-                /* Fix: Make sidebar toggle button ALWAYS visible */
-    button[data-testid="stBaseButton-headerNoPadding"],
-    button[kind="header"],
-    [data-testid="stSidebarCollapsedControl"],
-    [data-testid="collapsedControl"] {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        z-index: 999999 !important;
-        background: linear-gradient(135deg, #3D5A3C 0%, #C85A7E 100%) !important;
-        color: white !important;
-        border-radius: 8px !important;
-        padding: 0.5rem !important;
-        margin: 0.5rem !important;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
-    }
-    
-    button[data-testid="stBaseButton-headerNoPadding"] svg,
-    button[kind="header"] svg,
-    [data-testid="stSidebarCollapsedControl"] svg,
-    [data-testid="collapsedControl"] svg {
-        color: white !important;
-        fill: white !important;
-    }
-    
-    /* Ensure sidebar can toggle properly */
-    section[data-testid="stSidebar"][aria-expanded="false"] {
-        transform: translateX(-100%);
-    }
-    
-    section[data-testid="stSidebar"][aria-expanded="true"] {
-        transform: translateX(0);
-    }
-    
+                
     section[data-testid="stSidebar"] * {
         color: var(--sage-deepest) !important;
     }
@@ -381,6 +348,56 @@ st.markdown("""
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
+            
+                /* NUCLEAR FIX: Force ALL possible sidebar toggle selectors visible */
+    [data-testid="stSidebarCollapsedControl"],
+    [data-testid="collapsedControl"],
+    [data-testid="stSidebarCollapseButton"],
+    div[data-testid="stSidebarCollapsedControl"],
+    button[title="Close sidebar"],
+    button[title="Open sidebar"],
+    [aria-label="Open sidebar"],
+    [aria-label="Close sidebar"],
+    .stSidebar > div > button,
+    section[data-testid="stSidebar"] button:first-child {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: fixed !important;
+        top: 0.5rem !important;
+        left: 0.5rem !important;
+        z-index: 999999999 !important;
+        background: linear-gradient(135deg, #3D5A3C 0%, #C85A7E 100%) !important;
+        color: white !important;
+        border-radius: 8px !important;
+        padding: 0.5rem !important;
+        border: none !important;
+        cursor: pointer !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+        width: auto !important;
+        height: auto !important;
+        min-width: 40px !important;
+        min-height: 40px !important;
+    }
+    
+    /* Force all SVGs inside toggle buttons to be white */
+    [data-testid="stSidebarCollapsedControl"] svg,
+    [data-testid="collapsedControl"] svg,
+    [data-testid="stSidebarCollapseButton"] svg,
+    button[title*="sidebar"] svg,
+    button[aria-label*="sidebar"] svg {
+        color: white !important;
+        fill: white !important;
+        stroke: white !important;
+        width: 24px !important;
+        height: 24px !important;
+    }
+    
+    /* Remove any hidden overrides on parent containers */
+    [data-testid="stSidebarCollapsedControl"] * {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 

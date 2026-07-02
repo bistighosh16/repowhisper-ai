@@ -110,7 +110,6 @@ RepoWhisper AI features a professional **Sage Green + Soft Pink** theme designed
 
 **1. Clone the repository:**
 
-```bash
 git clone https://github.com/bistighosh16/repowhisper-ai.git
 cd repowhisper-ai
 2. Create a virtual environment:
@@ -156,7 +155,6 @@ Start with 🗺️ Explorer — Paste any GitHub repo URL to analyze it
 💬 Chat — Ask questions about the loaded codebase
 🚪 PR Companion — Paste an issue URL for contribution guidance
 Example: Contributing to Open Source
-text
 
 1. Analyze streamlit/streamlit in Explorer
 2. Find an issue tagged "good first issue"
@@ -166,7 +164,7 @@ text
 6. Use the generated PR description template
 7. Submit your PR with confidence! 🎉
 🏗️ Project Structure
-text
+
 
 repowhisper-ai/
 ├── app.py                      # Home page
@@ -254,5 +252,3 @@ Made with 💜 by Vivi
 Building tools that help developers understand, contribute, and thrive.
 
 ⭐ If RepoWhisper AI helped you, please star the repo! ⭐
-
-</div> ```
